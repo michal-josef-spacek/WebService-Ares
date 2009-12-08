@@ -1,0 +1,9 @@
+TODO
+====
+1. Prvni verze, ktera stahne dotaz pro ic.
+2. metoda get_xml, ktera vrati celou xml odpoved.
+3. metoda get, ktera vrati strukturu s odpovedi.
+4.
+
+Applied
+=======
