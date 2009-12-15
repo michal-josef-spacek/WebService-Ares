@@ -6,3 +6,7 @@ t/Ares/00_use.t
 t/Ares/01_version.t
 t/Ares/02_pod_coverage.t
 t/Ares/03_pod.t
+t/Ares::Standard/00_use.t
+t/Ares::Standard/01_version.t
+t/Ares::Standard/02_pod_coverage.t
+t/Ares::Standard/03_pod.t

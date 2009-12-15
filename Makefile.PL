@@ -10,6 +10,7 @@ WriteMakefile(
 	},
 	'VERSION' => 0.01,
 	'test' => {
-		'TESTS' => 't/Ares/*.t',
+		'TESTS' => 't/Ares/*.t '.
+			't/Ares::Standard/*.t',
 	},
 );
