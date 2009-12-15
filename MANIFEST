@@ -1,4 +1,5 @@
 Ares.pm
+Ares/Standard.pm
 Makefile.PL
 MANIFEST			This list of files
 t/Ares/00_use.t
