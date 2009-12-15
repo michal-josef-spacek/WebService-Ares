@@ -11,6 +11,7 @@ use warnings;
 use Error::Simple::Multiple qw(err);
 use Readonly;
 use XML::Parser;
+use Encode qw(encode_utf8);
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(parse);
@@ -74,14 +75,6 @@ sub _check_stack {
 }
 
 #------------------------------------------------------------------------------
-sub _odpoved {
-#------------------------------------------------------------------------------
-# Process 'are:Odpoved' element.
-
-	my $expat = shift;
-}
-
-#------------------------------------------------------------------------------
 sub _peek_stack {
 #------------------------------------------------------------------------------
 # Parsed data stack peek function.
@@ -128,6 +121,34 @@ sub _xml_char {
 	# Drop empty strings.
 	if ($text =~ m/^\s*$/sm) {
 		return;
+
+	# Encode.
+	} else {
+		$text = encode_utf8($text);
+	}
+
+	# Get actual tag name.
+	my ($tag_name) = _peek_stack($expat);
+
+	# Process data.
+	if ($tag_name eq 'are:ICO') {
+		_save($expat, $text, 'ic');
+	} elsif ($tag_name eq 'are:Obchodni_firma') {
+		_save($expat, $text, 'firm');		
+	} elsif ($tag_name eq 'are:Datum_vzniku') {
+		_save($expat, $text, 'create_date');
+	} elsif ($tag_name eq 'dtt:Nazev_ulice') {
+		_save_address($expat, $text, 'street');
+	} elsif ($tag_name eq 'dtt:PSC') {
+		_save_address($expat, $text, 'psc');
+	} elsif ($tag_name eq 'dtt:Cislo_domovni') {
+		_save_address($expat, $text, 'num');
+	} elsif ($tag_name eq 'dtt:Cislo_orientacni') {
+		_save_address($expat, $text, 'num2');
+	} elsif ($tag_name eq 'dtt:Nazev_obce') {
+		_save_address($expat, $text, 'town');
+	} elsif ($tag_name eq 'dtt:Nazev_casti_obce') {
+		_save_address($expat, $text, 'town_part');
 	}
 
 	return;
@@ -149,25 +170,44 @@ sub _xml_tag_start {
 # Start tags handler.
 
 	my ($expat, $tag_name, @params) = @_;
-	foreach ($tag_name) {
-		m/^are:Odpoved/ms      && do {
-			_odpoved($expat, @params);      last;
-		};
-		m/^are:Zaznam/ms       && do {
-			_zaznam($expat, @params);       last;
-		};
-		err "Unexpected element '$tag_name'.";
-		_push_stack($expat, $tag_name, {});
-	}
+	_push_stack($expat, $tag_name, {});
 	return;
 }
 
 #------------------------------------------------------------------------------
-sub _zaznam {
+# Concrete subroutines.
 #------------------------------------------------------------------------------
-# Process 'are:Zaznam' element.
 
-	my $expat = shift;
+#------------------------------------------------------------------------------
+sub _save {
+#------------------------------------------------------------------------------
+# Save common data.
+
+	my ($expat, $text, $key) = @_;
+
+	# Data.	
+	my $data_hr = $expat->{'Non-Expat-Options'}->{'data'};
+
+	# Save text.
+	$data_hr->{$key} = $text;
+
+	return;
+}
+
+#------------------------------------------------------------------------------
+sub _save_address {
+#------------------------------------------------------------------------------
+# Save address data.
+
+	my ($expat, $text, $key) = @_;
+
+	# Data.	
+	my $data_hr = $expat->{'Non-Expat-Options'}->{'data'};
+
+	# Save text.
+	$data_hr->{'address'}->{$key} = $text;
+
+	return;
 }
 
 1;
