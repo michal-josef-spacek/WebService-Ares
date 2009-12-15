@@ -93,10 +93,14 @@ sub get {
 	my $data = $self->_get_page($c_hr->{'method'}, $url);
 
 	# Parse XML.
-	# TODO
+	my $data_hr;
+	if ($command eq 'standard') {
+		require Ares::Standard;
+		$data_hr = Ares::Standard::parse($data);
+	}
 
 	# Result.
-	return $data;
+	return $data_hr;
 }
 
 #------------------------------------------------------------------------------
