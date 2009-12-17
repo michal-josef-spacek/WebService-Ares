@@ -176,6 +176,10 @@ sub _xml_char {
 		_save_address($expat, $text, 'town');
 	} elsif ($tag_name eq 'dtt:Nazev_casti_obce') {
 		_save_address($expat, $text, 'town_part');
+	} elsif ($tag_name eq 'dtt:Nazev_mestske_casti') {
+		_save_address($expat, $text, 'town_urban');
+	} elsif ($tag_name eq 'dtt:Nazev_okresu') {
+		_save_address($expat, $text, 'district');
 	}
 
 	return;
