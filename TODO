@@ -4,7 +4,8 @@ TODO
 2. metoda get_xml, ktera vrati celou xml odpoved.
 3. metoda get, ktera vrati strukturu s odpovedi.
 4. Knihovna na parsovani kazdeho typu XML.
-5.
+5. Testy.
+6.
 
 Applied
 =======
