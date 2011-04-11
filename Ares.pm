@@ -5,6 +5,7 @@ use strict;
 use warnings;
 
 # Modules.
+use Class::Utils qw(set_params);
 use Error::Simple::Multiple qw(err);
 use HTTP::Request;
 use LWP::UserAgent;
@@ -26,14 +27,7 @@ sub new {
 	$self->{'debug'} = 0;
 
 	# Params.
-	while (@params) {
-		my $key = shift @params;
-		my $val = shift @params;
-		if (! exists $self->{$key}) {
-			err "Unknown parameter '$key'.";
-		}
-		$self->{$key} = $val;
-	}
+	set_params($self, @params);
 
 	# Commands.
 	$self->{'commands'} = {

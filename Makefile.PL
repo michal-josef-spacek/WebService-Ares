@@ -5,6 +5,7 @@ use ExtUtils::MakeMaker;
 WriteMakefile(
 	'NAME' => 'Ares',
 	'PREREQ_PM' => {
+		'Class::Utils' => 0.01,
 		'Error::Simple::Multiple' => 0.05,
 		'Readonly' => 0,
 	},
