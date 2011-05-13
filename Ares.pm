@@ -21,7 +21,7 @@ sub new {
 	my $self = bless {}, $class;
 
 	# User agent.
-	$self->{'agent'} = 'Ares skim/0.1';
+	$self->{'agent'} = 'Ares/'.$VERSION;
 
 	# Debug.
 	$self->{'debug'} = 0;
