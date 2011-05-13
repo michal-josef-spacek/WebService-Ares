@@ -12,7 +12,7 @@ use XML::Parser;
 use Encode qw(encode_utf8);
 
 # Constants.
-Readonly::Array our @EXPORT_OK => qw(parse parse_file);
+Readonly::Array our @EXPORT_OK => qw(parse);
 Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
@@ -23,31 +23,21 @@ sub parse {
 	my $xml = shift;
 
 	# XML::Parser object.
-	my ($data_hr, $parser) = _init();
+	my $data_hr = {};
+	my $parser = XML::Parser->new(
+		'Handlers' => {
+			'Start' => \&_xml_tag_start,
+			'End' => \&_xml_tag_end,
+			'Char' => \&_xml_char,
+		},
+		'Non-Expat-Options' => {
+			'data' => $data_hr,
+			'stack' => [],
+		},
+	);
 
 	# Parse.
 	$parser->parse($xml);
-
-	# Return structure.
-	return $data_hr;
-}
-
-# Parse XML file.
-sub parse_file {
-	my $file_path = shift;
-
-	# Check to filepath.
-	if (! -r $file_path) {
-		err "Cannot exist file '$file_path'.";
-	}
-
-	# XML::Parser object.
-	my ($data_hr, $parser) = _init();
-
-	# Parse.
-	if (! $parser->parsefile($file_path)) {
-		err "Cannot parse file '$file_path'.";
-	}
 
 	# Return structure.
 	return $data_hr;
@@ -63,25 +53,6 @@ sub _check_stack {
 		}
 	}
 	return;
-}
-
-# Initialization.
-sub _init {
-
-	# XML::Parser object.
-	my $data_hr = {};
-	my $parser = XML::Parser->new(
-		'Handlers' => {
-			'Start' => \&_xml_tag_start,
-			'End' => \&_xml_tag_end,
-			'Char' => \&_xml_char,
-		},
-		'Non-Expat-Options' => {
-			'data' => $data_hr,
-			'stack' => [],
-		},
-	);
-	return ($data_hr, $parser);
 }
 
 # Parsed data stack peek function.
