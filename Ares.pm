@@ -117,3 +117,80 @@ sub _get_page {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+Ares - TODO
+
+=head1 SYNOPSIS
+
+ use Ares;
+ TODO
+
+=head1 METHODS
+
+=over 8
+
+=item C<new(%parameters)>
+
+ Constructor.
+
+=over 8
+
+=item * C<agent>
+
+ User agent setting.
+ Default is 'Ares/$VERSION'.
+
+=item * C<debug>
+
+ Debug mode flag.
+ Default is 0.
+
+=back
+
+=item C<commands()>
+
+ TODO
+
+=item C<get($command, $def_hr)>
+
+TODO
+
+=back
+
+=head1 ERRORS
+
+ Mine:
+         TODO
+
+=head1 DEPENDENCIES
+
+L<Class::Utils(3pm)>,
+L<Error::Simple::Multiple(3pm)>,
+L<HTTP::Request(3pm)>,
+L<LWP::UserAgent(3pm)>.
+
+=head1 SEE ALSO
+
+L<Ares::Standard(3pm)>.
+
+=head1 AUTHOR
+
+Michal Špaček L<skim@cpan.org>
+
+=head1 LICENSE AND COPYRIGHT
+
+BSD license.
+
+=head1 VERSION
+
+0.01
+
+=cut
