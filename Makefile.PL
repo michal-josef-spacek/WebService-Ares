@@ -11,8 +11,13 @@ WriteMakefile(
 	'NAME' => 'Ares',
 	'PREREQ_PM' => {
 		'Class::Utils' => 0.01,
-		'Error::Simple::Multiple' => 0.05,
+		'Encode' => 0,
+		'Error::Pure' => 0.01,
+		'Exporter' => 0,
+		'HTTP::Request' => 0,
+		'LWP::UserAgent' => 0,
 		'Readonly' => 0,
+		'XML::Parser' => 0,
 	},
 	'VERSION' => 0.01,
 	'test' => {
