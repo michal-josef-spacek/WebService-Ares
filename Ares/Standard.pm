@@ -6,7 +6,6 @@ use strict;
 use warnings;
 
 # Modules.
-use Error::Simple::Multiple qw(err);
 use Readonly;
 use XML::Parser;
 use Encode qw(encode_utf8);
