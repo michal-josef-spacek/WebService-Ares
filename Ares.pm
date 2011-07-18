@@ -172,14 +172,14 @@ TODO
 
 =head1 DEPENDENCIES
 
-L<Class::Utils(3pm)>,
-L<Error::Pure(3pm)>,
-L<HTTP::Request(3pm)>,
-L<LWP::UserAgent(3pm)>.
+L<Class::Utils>,
+L<Error::Pure>,
+L<HTTP::Request>,
+L<LWP::UserAgent>.
 
 =head1 SEE ALSO
 
-L<Ares::Standard(3pm)>.
+L<Ares::Standard>.
 
 =head1 AUTHOR
 
