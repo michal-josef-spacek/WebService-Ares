@@ -1,7 +1,7 @@
 Ares.pm
 Ares/Standard.pm
-CHANGES
-Makefile.PL
+Changes
+makefile.PL
 MANIFEST			This list of files
 t/Ares/00-use.t
 t/Ares/01-version.t
