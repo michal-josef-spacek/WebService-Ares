@@ -1,0 +1,46 @@
+NAME
+    Ares - TODO
+
+SYNOPSIS
+     use Ares;
+     TODO
+
+METHODS
+    "new(%parameters)"
+             Constructor.
+
+            *       "agent"
+
+                     User agent setting.
+                     Default is 'Ares/$VERSION'.
+
+            *       "debug"
+
+                     Debug mode flag.
+                     Default is 0.
+
+    "commands()"
+             TODO
+
+    "get($command, $def_hr)"
+            TODO
+
+ERRORS
+     Mine:
+             TODO
+
+DEPENDENCIES
+    Class::Utils, Error::Pure, HTTP::Request, LWP::UserAgent.
+
+SEE ALSO
+    Ares::Standard.
+
+AUTHOR
+    Michal Špaček skim@cpan.org
+
+LICENSE AND COPYRIGHT
+    BSD license.
+
+VERSION
+    0.01
+
