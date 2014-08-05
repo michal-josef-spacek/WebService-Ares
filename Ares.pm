@@ -1,4 +1,4 @@
-package Ares;
+package WebService::Ares;
 
 # Pragmas.
 use strict;
@@ -21,7 +21,7 @@ sub new {
 	my $self = bless {}, $class;
 
 	# User agent.
-	$self->{'agent'} = 'Ares/'.$VERSION;
+	$self->{'agent'} = 'WebService::Ares/'.$VERSION;
 
 	# Debug.
 	$self->{'debug'} = 0;
@@ -126,11 +126,11 @@ __END__
 
 =head1 NAME
 
-Ares - TODO
+WebService::Ares - TODO
 
 =head1 SYNOPSIS
 
- use Ares;
+ use WebService::Ares;
  TODO
 
 =head1 METHODS
@@ -146,7 +146,7 @@ Ares - TODO
 =item * C<agent>
 
  User agent setting.
- Default is 'Ares/$VERSION'.
+ Default is 'WebService::Ares/$VERSION'.
 
 =item * C<debug>
 

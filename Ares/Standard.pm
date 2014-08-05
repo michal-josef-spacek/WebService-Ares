@@ -1,4 +1,4 @@
-package Ares::Standard;
+package WebService::Ares::Standard;
 
 # Pragmas.
 use base qw(Exporter);

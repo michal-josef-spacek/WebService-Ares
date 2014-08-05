@@ -3,9 +3,9 @@ use strict;
 use warnings;
 
 # Modules.
-use Ares::Standard;
+use WebService::Ares;
 use Test::More 'tests' => 2;
 use Test::NoWarnings;
 
 # Test.
-is($Ares::Standard::VERSION, 0.01, 'Version.');
+is($WebService::Ares::VERSION, 0.01, 'Version.');

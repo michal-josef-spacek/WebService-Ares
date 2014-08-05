@@ -7,4 +7,4 @@ use Test::NoWarnings;
 use Test::Pod::Coverage 'tests' => 2;
 
 # Test.
-pod_coverage_ok('Ares', 'Ares is covered.');
+pod_coverage_ok('WebService::Ares::Standard', 'WebService::Ares::Standard is covered.');

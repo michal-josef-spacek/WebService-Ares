@@ -9,8 +9,8 @@ use Test::NoWarnings;
 BEGIN {
 
 	# Test.
-	use_ok('Ares');
+	use_ok('WebService::Ares');
 }
 
 # Test.
-require_ok('Ares');
+require_ok('WebService::Ares');
