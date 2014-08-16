@@ -4,9 +4,11 @@ use warnings;
 
 # Modules.
 use Encode qw(decode_utf8);
+use English;
+use Error::Pure::Utils qw(clean);
 use File::Object;
 use Perl6::Slurp qw(slurp);
-use Test::More 'tests' => 2;
+use Test::More 'tests' => 3;
 use Test::NoWarnings;
 use WebService::Ares::Standard qw(parse);
 
@@ -34,3 +36,10 @@ is_deeply(
 	},
 	'Get information from ex1.xml file.',
 );
+
+# Test.
+eval {
+	parse('foo');
+};
+is($EVAL_ERROR, "Cannot parse XML string.\n", 'Cannot parse XML string.');
+clean()
