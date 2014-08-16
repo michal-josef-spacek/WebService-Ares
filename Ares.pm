@@ -131,6 +131,13 @@ WebService::Ares - Perl class to communication with Ares service.
 =head1 SYNOPSIS
 
  use WebService::Ares;
+ my $obj = WebService::Ares->new(%parameters);
+ my @commands = $obj->commands;
+ my $data_hr = $obj->get($command, $def_hr);
+
+=head1 DESCRIPTION
+
+ What is it Ares?
  TODO
 
 =head1 METHODS
@@ -157,21 +164,96 @@ WebService::Ares - Perl class to communication with Ares service.
 
 =item C<commands()>
 
- TODO
+ Get web service commands.
+ Returns array of commands.
 
 =item C<get($command, $def_hr)>
 
-TODO
+ Get data for command '$command' and definitition defined in $dev_hr reference of hash.
+ Returns reference to hash with data.
 
 =back
 
 =head1 ERRORS
 
- Mine:
-         TODO
+ get()
+         Method '%s' is unimplemened.
+
+=head1 EXAMPLE1
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use WebService::Ares;
+
+ # Object.
+ my $obj = WebService::Ares->new;
+
+ # Get data.
+ # TODO
+
+ # Print data.
+ # TODO
+
+ # Output:
+ # TODO
+
+=head1 EXAMPLE2
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Data::Printer;
+ use WebService::Ares;
+
+ # Arguments.
+ if (@ARGV < 1) {
+         print STDERR "Usage: $0 ic\n";
+         exit 1;
+ }
+ my $ic = $ARGV[0];
+
+ # Object.
+ my $obj = WebService::Ares->new;
+
+ # Get data.
+ my $data_hr = $obj->get('standard', {'ic' => $ic});
+
+ # Print data.
+ p $data_hr;
+
+ # Output:
+ # TODO
+
+=head1 EXAMPLE3
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use WebService::Ares;
+
+ # Object.
+ my $obj = WebService::Ares->new;
+
+ # Get commands.
+ my @commands = $obj->commands;
+
+ # Print commands.
+ print join "\n", @commands;
+ print "\n";
+
+ # Output:
+ # standard
 
 =head1 DEPENDENCIES
 
+L<Ares::Standard>,
 L<Class::Utils>,
 L<Error::Pure>,
 L<HTTP::Request>,
@@ -180,6 +262,10 @@ L<LWP::UserAgent>.
 =head1 SEE ALSO
 
 L<Ares::Standard>.
+
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/WebService-Ares>
 
 =head1 AUTHOR
 

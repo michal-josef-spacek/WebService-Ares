@@ -3,6 +3,12 @@ NAME
 
 SYNOPSIS
      use WebService::Ares;
+     my $obj = WebService::Ares->new(%parameters);
+     my @commands = $obj->commands;
+     my $data_hr = $obj->get($command, $def_hr);
+
+DESCRIPTION
+     What is it Ares?
      TODO
 
 METHODS
@@ -20,20 +26,95 @@ METHODS
                      Default is 0.
 
     "commands()"
-             TODO
+             Get web service commands.
+             Returns array of commands.
 
     "get($command, $def_hr)"
-            TODO
+             Get data for command '$command' and definitition defined in $dev_hr reference of hash.
+             Returns reference to hash with data.
 
 ERRORS
-     Mine:
-             TODO
+     get()
+             Method '%s' is unimplemened.
+
+EXAMPLE1
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use WebService::Ares;
+
+     # Object.
+     my $obj = WebService::Ares->new;
+
+     # Get data.
+     # TODO
+
+     # Print data.
+     # TODO
+
+     # Output:
+     # TODO
+
+EXAMPLE2
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use Data::Printer;
+     use WebService::Ares;
+
+     # Arguments.
+     if (@ARGV < 1) {
+             print STDERR "Usage: $0 ic\n";
+             exit 1;
+     }
+     my $ic = $ARGV[0];
+
+     # Object.
+     my $obj = WebService::Ares->new;
+
+     # Get data.
+     my $data_hr = $obj->get('standard', {'ic' => $ic});
+
+     # Print data.
+     p $data_hr;
+
+     # Output:
+     # TODO
+
+EXAMPLE3
+     # Pragmas.
+     use strict;
+     use warnings;
+
+     # Modules.
+     use WebService::Ares;
+
+     # Object.
+     my $obj = WebService::Ares->new;
+
+     # Get commands.
+     my @commands = $obj->commands;
+
+     # Print commands.
+     print join "\n", @commands;
+     print "\n";
+
+     # Output:
+     # standard
 
 DEPENDENCIES
-    Class::Utils, Error::Pure, HTTP::Request, LWP::UserAgent.
+    Ares::Standard, Class::Utils, Error::Pure, HTTP::Request,
+    LWP::UserAgent.
 
 SEE ALSO
     Ares::Standard.
+
+REPOSITORY
+    <https://github.com/tupinek/WebService-Ares>
 
 AUTHOR
     Michal Špaček skim@cpan.org
