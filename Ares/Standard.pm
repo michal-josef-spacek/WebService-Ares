@@ -7,6 +7,8 @@ use warnings;
 
 # Modules.
 use Encode qw(encode_utf8);
+use English;
+use Error::Pure qw(err);
 use Readonly;
 use XML::Parser;
 
@@ -36,7 +38,16 @@ sub parse {
 	);
 
 	# Parse.
-	$parser->parse($xml);
+	eval {
+		$parser->parse($xml);
+	};
+	if ($EVAL_ERROR) {
+		my $err = $EVAL_ERROR;
+		$err =~ s/^\n+//msg;
+		chomp $err;
+		err 'Cannot parse XML string.',
+			'XML::Parser error', $err;
+	}
 
 	# Return structure.
 	return $data_hr;
