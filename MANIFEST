@@ -20,10 +20,12 @@ Makefile.PL
 MANIFEST			This list of files
 META.yml
 README
+t/data/standard/ex1.xml
 t/WebService-Ares-Standard/00-use.t
 t/WebService-Ares-Standard/01-version.t
 t/WebService-Ares-Standard/02-pod_coverage.t
 t/WebService-Ares-Standard/03-pod.t
+t/WebService-Ares-Standard/04-parse.t
 t/WebService-Ares/00-use.t
 t/WebService-Ares/01-version.t
 t/WebService-Ares/02-pod_coverage.t
