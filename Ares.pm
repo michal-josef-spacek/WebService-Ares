@@ -126,7 +126,7 @@ __END__
 
 =head1 NAME
 
-WebService::Ares - TODO
+WebService::Ares - Perl class to communication with Ares service.
 
 =head1 SYNOPSIS
 
