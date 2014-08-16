@@ -49,7 +49,7 @@ sub new {
 	return $self;
 }
 
-# Get commands.
+# Get web service commands.
 sub commands {
 	my $self = shift;
 	return sort keys %{$self->{'commands'}};
