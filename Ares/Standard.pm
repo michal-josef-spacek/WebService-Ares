@@ -178,3 +178,134 @@ sub _save_address {
 }
 
 1;
+
+__END__
+
+=pod
+
+=encoding utf8
+
+=head1 NAME
+
+WebService::Ares::Standard - Perl XML::Parser parser for Ares standard XML file.
+
+=head1 SYNOPSIS
+
+ use WebService::Ares::Standard qw(parse);
+ my $data_hr = parse($xml);
+
+=head1 DESCRIPTION
+
+ TODO
+ Module parse these information from XML file:
+ - company
+ - create_date
+ - district
+ - ic
+ - num
+ - num2
+ - psc
+ - street
+ - town
+ - town_part
+ - town_urban
+
+=head1 SUBROUTINES
+
+=over 8
+
+=item C<parse($xml)>
+
+ Parse XML string.
+ Returns reference to hash with data.
+
+=back
+
+=head1 ERRORS
+
+ parse():
+         Cannot parse XML string.
+                 XML::Parser error: %s
+
+=head1 EXAMPLE1
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Data::Printer;
+ use WebService::Ares::Standard qw(parse);
+
+ # Fake XML.
+ my $xml = 'TODO';
+
+ # Parse.
+ my $data_hr = parse($xml);
+
+ # Print.
+ p $data_hr;
+
+ # Output:
+ # TODO
+
+=head1 EXAMPLE2
+
+ # Pragmas.
+ use strict;
+ use warnings;
+
+ # Modules.
+ use Data::Printer;
+ use Perl6::Slurp qw(slurp);
+ use WebService::Ares::Standard qw(parse);
+
+ # Arguments.
+ if (@ARGV < 1) {
+         print STDERR "Usage: $0 $xml_file\n";
+         exit 1;
+ }
+ my $xml_file = $ARGV[0];
+
+ # Get XML.
+ my $xml = slurp($xml_file);
+
+ # Parse.
+ my $data_hr = parse($xml);
+
+ # Print.
+ p $data_hr;
+
+ # Output like:
+ # TODO
+
+=head1 DEPENDENCIES
+
+L<Encode>,
+L<English>,
+L<Error::Pure>,
+L<Exporter>,
+L<Readonly>,
+L<XML::Parser>.
+
+=head1 SEE ALSO
+
+L<WebService::Ares>.
+
+=head1 REPOSITORY
+
+L<https://github.com/tupinek/WebService-Ares>
+
+=head1 AUTHOR
+
+Michal Špaček L<skim@cpan.org>
+
+=head1 LICENSE AND COPYRIGHT
+
+BSD license.
+
+=head1 VERSION
+
+0.01
+
+=cut
