@@ -1,9 +1,9 @@
 TODO
 ====
-1. Prvni verze, ktera stahne dotaz pro ic.
 2. metoda get_xml, ktera vrati celou xml odpoved.
 3. metoda get, ktera vrati strukturu s odpovedi.
 4. Knihovna na parsovani kazdeho typu XML.
+standard je hotov
 5. Testy.
 7.
 
@@ -11,3 +11,6 @@ Applied
 =======
 6. Prejmenovat na WebService::Ares.
 OK [20140806] skim
+
+1. Prvni verze, ktera stahne dotaz pro ic.
+OK [20140816] skim
