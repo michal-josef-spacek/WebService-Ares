@@ -23,6 +23,7 @@ meta-spec:
 name: WebService-Ares
 no_index:
   directory:
+    - examples
     - inc
     - t
 requires:

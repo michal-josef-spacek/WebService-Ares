@@ -1,6 +1,11 @@
 Ares.pm
 Ares/Standard.pm
 Changes
+examples/ex1.pl
+examples/ex2.pl
+examples/ex3.pl
+examples/ex4.pl
+examples/ex5.pl
 inc/Module/Install.pm
 inc/Module/Install/Base.pm
 inc/Module/Install/Can.pm
