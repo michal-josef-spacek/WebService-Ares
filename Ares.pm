@@ -59,6 +59,24 @@ sub commands {
 sub get {
 	my ($self, $command, $def_hr) = @_;
 
+	# Get XML data.
+	my $data = $self->get_xml($command, $def_hr);
+
+	# Parse XML.
+	my $data_hr;
+	if ($command eq 'standard') {
+		require Ares::Standard;
+		$data_hr = Ares::Standard::parse($data);
+	}
+
+	# Result.
+	return $data_hr;
+}
+
+# Get XML file.
+sub get_xml {
+	my ($self, $command, $def_hr) = @_;
+
 	# Command structure.
 	my $c_hr = $self->{'commands'}->{$command};
 
@@ -72,18 +90,8 @@ sub get {
 		}
 	}
 
-	# Get data.
-	my $data = $self->_get_page($c_hr->{'method'}, $url);
-
-	# Parse XML.
-	my $data_hr;
-	if ($command eq 'standard') {
-		require Ares::Standard;
-		$data_hr = Ares::Standard::parse($data);
-	}
-
-	# Result.
-	return $data_hr;
+	# Get XML data.
+	return $self->_get_page($c_hr->{'method'}, $url);
 }
 
 # Get page.
@@ -101,7 +109,7 @@ sub _get_page {
 	if ($method eq 'GET') {
 		$req = HTTP::Request->new('GET' => $url);
 	} else {
-		err "Method '$method' is unimplemened.";
+		err "Method '$method' is unimplemenited.";
 	}
 
 	# Response.
@@ -134,6 +142,7 @@ WebService::Ares - Perl class to communication with Ares service.
  my $obj = WebService::Ares->new(%parameters);
  my @commands = $obj->commands;
  my $data_hr = $obj->get($command, $def_hr);
+ my $xml_data = $obj->get_xml($command, $def_hr);
 
 =head1 DESCRIPTION
 
@@ -172,12 +181,20 @@ WebService::Ares - Perl class to communication with Ares service.
  Get data for command '$command' and definitition defined in $dev_hr reference of hash.
  Returns reference to hash with data.
 
+=item C<get_xml($command, $def_hr)>
+
+ Get XML data for command '$command' and definition defined in $dev_hr reference to hash.
+ Returns string with XML data.
+
 =back
 
 =head1 ERRORS
 
- get()
-         Method '%s' is unimplemened.
+ get():
+         Method '%s' is unimplemented.
+
+ get_xml():
+         Method '%s' is unimplemented.
 
 =head1 EXAMPLE1
 

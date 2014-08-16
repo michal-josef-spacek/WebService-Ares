@@ -6,6 +6,7 @@ SYNOPSIS
      my $obj = WebService::Ares->new(%parameters);
      my @commands = $obj->commands;
      my $data_hr = $obj->get($command, $def_hr);
+     my $xml_data = $obj->get_xml($command, $def_hr);
 
 DESCRIPTION
      What is it Ares?
@@ -33,9 +34,16 @@ METHODS
              Get data for command '$command' and definitition defined in $dev_hr reference of hash.
              Returns reference to hash with data.
 
+    "get_xml($command, $def_hr)"
+             Get XML data for command '$command' and definition defined in $dev_hr reference to hash.
+             Returns string with XML data.
+
 ERRORS
-     get()
-             Method '%s' is unimplemened.
+     get():
+             Method '%s' is unimplemented.
+
+     get_xml():
+             Method '%s' is unimplemented.
 
 EXAMPLE1
      # Pragmas.
