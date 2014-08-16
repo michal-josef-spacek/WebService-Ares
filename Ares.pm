@@ -41,6 +41,9 @@ sub new {
 		},
 	};
 
+	# Error string.
+	$self->{'error'} = undef;
+
 	# User agent.
 	$self->{'ua'} = LWP::UserAgent->new;
 	$self->{'ua'}->agent($self->{'agent'});
@@ -53,6 +56,16 @@ sub new {
 sub commands {
 	my $self = shift;
 	return sort keys %{$self->{'commands'}};
+}
+
+# Get error.
+sub error {
+	my ($self, $clean) = @_;
+	my $error = $self->{'error'};
+	if ($clean) {
+		$self->{'error'} = undef;
+	}
+	return $error;
 }
 
 # Get data.
@@ -141,6 +154,7 @@ WebService::Ares - Perl class to communication with Ares service.
  use WebService::Ares;
  my $obj = WebService::Ares->new(%parameters);
  my @commands = $obj->commands;
+ my $error = $obj->error($clean);
  my $data_hr = $obj->get($command, $def_hr);
  my $xml_data = $obj->get_xml($command, $def_hr);
 
@@ -176,15 +190,21 @@ WebService::Ares - Perl class to communication with Ares service.
  Get web service commands.
  Returns array of commands.
 
+=item C<error($clean)>
+
+ Get error.
+ When $clean variable is present, cleans internal error variable.
+ Returns string with error or undef.
+
 =item C<get($command, $def_hr)>
 
  Get data for command '$command' and definitition defined in $dev_hr reference of hash.
- Returns reference to hash with data.
+ Returns reference to hash with data or undef as error.
 
 =item C<get_xml($command, $def_hr)>
 
  Get XML data for command '$command' and definition defined in $dev_hr reference to hash.
- Returns string with XML data.
+ Returns string with XML data or undef as error.
 
 =back
 
