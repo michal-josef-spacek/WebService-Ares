@@ -6,7 +6,6 @@ use strict;
 use warnings;
 
 # Modules.
-use Encode qw(encode_utf8);
 use English;
 use Error::Pure qw(err);
 use Readonly;
@@ -100,10 +99,6 @@ sub _xml_char {
 	# Drop empty strings.
 	if ($text =~ m/^\s*$/sm) {
 		return;
-
-	# Encode.
-	} else {
-		$text = encode_utf8($text);
 	}
 
 	# Get actual tag name.
@@ -281,7 +276,6 @@ WebService::Ares::Standard - Perl XML::Parser parser for Ares standard XML file.
 
 =head1 DEPENDENCIES
 
-L<Encode>,
 L<English>,
 L<Error::Pure>,
 L<Exporter>,
