@@ -6,9 +6,9 @@ use strict;
 use warnings;
 
 # Modules.
+use Encode qw(encode_utf8);
 use Readonly;
 use XML::Parser;
-use Encode qw(encode_utf8);
 
 # Constants.
 Readonly::Array our @EXPORT_OK => qw(parse);
