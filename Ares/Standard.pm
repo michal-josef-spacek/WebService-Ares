@@ -113,7 +113,7 @@ sub _xml_char {
 	if ($tag_name eq 'are:ICO') {
 		_save($expat, $text, 'ic');
 	} elsif ($tag_name eq 'are:Obchodni_firma') {
-		_save($expat, $text, 'firm');		
+		_save($expat, $text, 'company');		
 	} elsif ($tag_name eq 'are:Datum_vzniku') {
 		_save($expat, $text, 'create_date');
 	} elsif ($tag_name eq 'dtt:Nazev_ulice') {
