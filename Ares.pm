@@ -160,7 +160,7 @@ WebService::Ares - Perl class to communication with Ares service.
 
 =head1 DESCRIPTION
 
- ARES - "Administrativní registr ekonomických subjektů" is Czech information system of Ministry of Finance
+ ARES - "Administrativní registr ekonomických subjektů" is Czech information system of Ministry of Finance.
 
 =head1 METHODS
 
@@ -198,11 +198,15 @@ WebService::Ares - Perl class to communication with Ares service.
 =item C<get($command, $def_hr)>
 
  Get data for command '$command' and definitition defined in $dev_hr reference of hash.
+ Possible definition keys are:
+ - ic - company identification number.
  Returns reference to hash with data or undef as error.
 
 =item C<get_xml($command, $def_hr)>
 
  Get XML data for command '$command' and definition defined in $dev_hr reference to hash.
+ Possible definition keys are:
+ - ic - company identification number.
  Returns string with XML data or undef as error.
 
 =back
