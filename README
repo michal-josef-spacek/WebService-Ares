@@ -10,8 +10,7 @@ SYNOPSIS
      my $xml_data = $obj->get_xml($command, $def_hr);
 
 DESCRIPTION
-     What is it Ares?
-     TODO
+     ARES - "Administrativní registr ekonomických subjektů" is Czech information system of Ministry of Finance
 
 METHODS
     "new(%parameters)"

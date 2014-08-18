@@ -160,8 +160,7 @@ WebService::Ares - Perl class to communication with Ares service.
 
 =head1 DESCRIPTION
 
- What is it Ares?
- TODO
+ ARES - "Administrativní registr ekonomických subjektů" is Czech information system of Ministry of Finance
 
 =head1 METHODS
 
