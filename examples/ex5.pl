@@ -11,7 +11,7 @@ use WebService::Ares::Standard qw(parse);
 
 # Arguments.
 if (@ARGV < 1) {
-        print STDERR "Usage: $0 $xml_file\n";
+        print STDERR "Usage: $0 xml_file\n";
         exit 1;
 }
 my $xml_file = $ARGV[0];
@@ -26,4 +26,4 @@ my $data_hr = parse($xml);
 p $data_hr;
 
 # Output like:
-# TODO
+# Usage: /tmp/WfgYq5ttuP xml_file
