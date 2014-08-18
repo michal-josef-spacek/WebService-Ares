@@ -182,7 +182,7 @@ __END__
 
 =head1 NAME
 
-WebService::Ares::Standard - Perl XML::Parser parser for Ares standard XML file.
+WebService::Ares::Standard - Perl XML::Parser parser for ARES standard XML file.
 
 =head1 SYNOPSIS
 

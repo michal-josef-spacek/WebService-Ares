@@ -1,5 +1,5 @@
 NAME
-    WebService::Ares - Perl class to communication with Ares service.
+    WebService::Ares - Perl class to communication with ARES service.
 
 SYNOPSIS
      use WebService::Ares;
