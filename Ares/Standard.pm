@@ -191,7 +191,7 @@ WebService::Ares::Standard - Perl XML::Parser parser for Ares standard XML file.
 
 =head1 DESCRIPTION
 
- TODO
+ This module parses XML file from ARES system.
  Module parse these information from XML file:
  - company
  - create_date
