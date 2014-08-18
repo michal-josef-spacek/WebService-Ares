@@ -32,3 +32,4 @@ t/WebService-Ares/02-pod_coverage.t
 t/WebService-Ares/03-pod.t
 t/WebService-Ares/04-new.t
 t/WebService-Ares/05-commands.t
+t/WebService-Ares/06-error.t
