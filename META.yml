@@ -1,7 +1,7 @@
 ---
 abstract: 'Perl class to communication with ARES service.'
 author:
-  - 'Michal Špaček <skim@cpan.org>'
+  - 'Michal Spacek <skim@cpan.org>'
 build_requires:
   Encode: 0
   English: 0
