@@ -365,7 +365,13 @@ L<XML::Parser>.
 
 =head1 SEE ALSO
 
-L<WebService::Ares>.
+=over
+
+=item L<WebService::Ares>
+
+Perl class to communication with Ares service.
+
+=back
 
 =head1 REPOSITORY
 

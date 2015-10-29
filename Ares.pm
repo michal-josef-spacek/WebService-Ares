@@ -393,7 +393,13 @@ L<LWP::UserAgent>.
 
 =head1 SEE ALSO
 
-L<Ares::Standard>.
+=over
+
+=item L<WebService::Ares::Standard>
+
+Perl XML::Parser parser for Ares standard XML file.
+
+=back
 
 =head1 REPOSITORY
 

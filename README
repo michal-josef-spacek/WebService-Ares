@@ -220,7 +220,8 @@ DEPENDENCIES
     LWP::UserAgent.
 
 SEE ALSO
-    Ares::Standard.
+    WebService::Ares::Standard
+        Perl XML::Parser parser for Ares standard XML file.
 
 REPOSITORY
     <https://github.com/tupinek/WebService-Ares>
