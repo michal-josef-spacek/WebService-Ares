@@ -16,7 +16,7 @@ Readonly::Array our @EXPORT_OK => qw(parse);
 Readonly::Scalar my $EMPTY_STR => q{};
 
 # Version.
-our $VERSION = 0.02;
+our $VERSION = 0.03;
 
 # Parse XML string.
 sub parse {
@@ -388,6 +388,6 @@ Michal Špaček L<skim@cpan.org>
 
 =head1 VERSION
 
-0.02
+0.03
 
 =cut

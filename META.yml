@@ -42,4 +42,4 @@ resources:
   homepage: https://github.com/tupinek/WebService-Ares
   license: http://opensource.org/licenses/bsd-license.php
   repository: git://github.com/tupinek/WebService-Ares
-version: '0.02'
+version: '0.03'
