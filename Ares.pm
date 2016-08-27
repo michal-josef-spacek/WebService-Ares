@@ -78,8 +78,8 @@ sub get {
 	# Parse XML.
 	my $data_hr;
 	if ($command eq 'standard') {
-		require Ares::Standard;
-		$data_hr = Ares::Standard::parse($data);
+		require WebService::Ares::Standard;
+		$data_hr = WebService::Ares::Standard::parse($data);
 	}
 
 	# Result.
