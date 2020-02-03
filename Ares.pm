@@ -149,6 +149,7 @@ WebService::Ares - Perl class to communication with ARES service.
 =head1 SYNOPSIS
 
  use WebService::Ares;
+
  my $obj = WebService::Ares->new(%parameters);
  my @commands = $obj->commands;
  my $error = $obj->error($clean);

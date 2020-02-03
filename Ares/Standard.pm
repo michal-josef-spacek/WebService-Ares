@@ -184,6 +184,7 @@ WebService::Ares::Standard - Perl XML::Parser parser for ARES standard XML file.
 =head1 SYNOPSIS
 
  use WebService::Ares::Standard qw(parse);
+
  my $data_hr = parse($xml);
 
 =head1 DESCRIPTION
