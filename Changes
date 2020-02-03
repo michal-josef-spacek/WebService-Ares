@@ -1,4 +1,5 @@
 0.03
+ - Update Module::Install to 1.19 version.
 
 0.02 2015-10-29T14:13:34+01:00
  - Change name Ares to better ARES in doc.
