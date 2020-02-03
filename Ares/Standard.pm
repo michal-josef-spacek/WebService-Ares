@@ -13,7 +13,6 @@ use XML::Parser;
 Readonly::Array our @EXPORT_OK => qw(parse);
 Readonly::Scalar my $EMPTY_STR => q{};
 
-# Version.
 our $VERSION = 0.03;
 
 # Parse XML string.
