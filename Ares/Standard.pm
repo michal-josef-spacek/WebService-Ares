@@ -13,7 +13,7 @@ use XML::Parser;
 Readonly::Array our @EXPORT_OK => qw(parse);
 Readonly::Scalar my $EMPTY_STR => q{};
 
-our $VERSION = 0.03;
+our $VERSION = 0.04;
 
 # Parse XML string.
 sub parse {
@@ -382,6 +382,6 @@ Michal Josef Špaček L<skim@cpan.org>
 
 =head1 VERSION
 
-0.03
+0.04
 
 =cut
