@@ -368,7 +368,7 @@ Perl class to communication with Ares service.
 
 =head1 REPOSITORY
 
-L<https://github.com/tupinek/WebService-Ares>
+L<https://github.com/michal-josef-spacek/WebService-Ares>
 
 =head1 AUTHOR
 
