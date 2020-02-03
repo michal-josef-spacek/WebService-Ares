@@ -55,11 +55,9 @@ ERRORS
              Method '%s' is unimplemented.
 
 EXAMPLE1
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use Data::Printer;
      use WebService::Ares;
 
@@ -100,11 +98,9 @@ EXAMPLE1
      # }
 
 EXAMPLE2
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use WebService::Ares;
 
      # Arguments.
@@ -195,11 +191,9 @@ EXAMPLE2
      # </are:Ares_odpovedi>
 
 EXAMPLE3
-     # Pragmas.
      use strict;
      use warnings;
 
-     # Modules.
      use WebService::Ares;
 
      # Object.

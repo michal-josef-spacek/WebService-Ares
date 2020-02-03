@@ -1,11 +1,9 @@
 package WebService::Ares::Standard;
 
-# Pragmas.
 use base qw(Exporter);
 use strict;
 use warnings;
 
-# Modules.
 use English;
 use Error::Pure qw(err);
 use Readonly;
@@ -224,11 +222,9 @@ WebService::Ares::Standard - Perl XML::Parser parser for ARES standard XML file.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Data::Printer;
  use WebService::Ares::Standard qw(parse);
 
@@ -327,11 +323,9 @@ WebService::Ares::Standard - Perl XML::Parser parser for ARES standard XML file.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Data::Printer;
  use Perl6::Slurp qw(slurp);
  use WebService::Ares::Standard qw(parse);

@@ -1,16 +1,13 @@
 package WebService::Ares;
 
-# Pragmas.
 use strict;
 use warnings;
 
-# Modules.
 use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use HTTP::Request;
 use LWP::UserAgent;
 
-# Version.
 our $VERSION = 0.03;
 
 # Constructor.
@@ -221,11 +218,9 @@ WebService::Ares - Perl class to communication with ARES service.
 
 =head1 EXAMPLE1
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use Data::Printer;
  use WebService::Ares;
 
@@ -267,11 +262,9 @@ WebService::Ares - Perl class to communication with ARES service.
 
 =head1 EXAMPLE2
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use WebService::Ares;
 
  # Arguments.
@@ -363,11 +356,9 @@ WebService::Ares - Perl class to communication with ARES service.
 
 =head1 EXAMPLE3
 
- # Pragmas.
  use strict;
  use warnings;
 
- # Modules.
  use WebService::Ares;
 
  # Object.
