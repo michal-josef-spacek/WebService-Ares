@@ -31,6 +31,13 @@ sub new {
 
 	# Commands.
 	$self->{'commands'} = {
+		'rzp' => {
+			'attr' => [
+				'ic',
+			],
+			'method' => 'GET',
+			'url' => $BASE_URL.'darv_rzp.cgi',
+		},
 		'standard' => {
 			'attr' => [
 				'ic',
@@ -79,6 +86,9 @@ sub get {
 	if ($command eq 'standard') {
 		require WebService::Ares::Standard;
 		$data_hr = WebService::Ares::Standard::parse($data);
+	} elsif ($command eq 'rzp') {
+		require WebService::Ares::Rzp;
+		$data_hr = WebService::Ares::Rzp::parse($data);
 	}
 
 	# Result.

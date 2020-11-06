@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<are:Ares_odpovedi xmlns:are="http://wwwinfo.mfcr.cz/ares/xml_doc/schemas/ares/ares_answer_rzp/v_1.0.5" xmlns:D="http://wwwinfo.mfcr.cz/ares/xml_doc/schemas/ares/ares_datatypes/v_1.0.5" xmlns:U="http://wwwinfo.mfcr.cz/ares/xml_doc/schemas/uvis_datatypes/v_1.0.3" odpoved_datum_cas="2020-11-06T10:40:29" odpoved_pocet="1" odpoved_typ="Vypis_RZP" vystup_format="XML" xslt="klient" validation_XSLT="http://wwwinfo.mfcr.cz/ares/xml_doc/schemas/ares/ares_odpovedi.xsl" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://wwwinfo.mfcr.cz/ares/xml_doc/schemas/ares/ares_answer_rzp/v_1.0.5 http://wwwinfo.mfcr.cz/ares/xml_doc/schemas/ares/ares_answer_rzp/v_1.0.5/ares_answer_rzp_v_1.0.5.xsd" Id="ares">
+<are:Odpoved>
+<D:PID>1</D:PID>
+<D:VH>
+<D:K>1</D:K>
+</D:VH>
+<D:PZA>1</D:PZA>
+<D:UVOD>
+<D:ND>Výpis z IS rzp</D:ND>
+<D:ADB>2020-11-05</D:ADB>
+<D:DVY>2020-11-06</D:DVY>
+<D:CAS>10:40:29</D:CAS>
+<D:TV>zakladni</D:TV>
+<D:Typ_odkazu>0</D:Typ_odkazu>
+</D:UVOD>
+<D:Vypis_RZP>
+<D:ZAU>
+<D:S>A</D:S>
+<D:Datum_zmeny>2018-11-14</D:Datum_zmeny>
+<D:ICO>00298328</D:ICO>
+<D:OF>Město Příbor</D:OF>
+<D:PF>
+<D:KPF>801</D:KPF>
+<D:NPF>Obec nebo městská část hlavního města Prahy</D:NPF>
+<D:PFO>P</D:PFO>
+<D:T>právnická osoba tuzemská</D:T>
+</D:PF>
+<D:ZU>
+<D:KZU>380403</D:KZU>
+<D:NZU>Městský úřad Kopřivnice</D:NZU>
+</D:ZU>
+<D:ZI1>1993-01-11</D:ZI1>
+<D:Vsech_zivnosti>11</D:Vsech_zivnosti>
+<D:Aktivnich_zivnosti>3</D:Aktivnich_zivnosti>
+<D:Aktivnich_provozoven>ano</D:Aktivnich_provozoven>
+</D:ZAU>
+<D:Adresy>
+<D:A kvadres="1">
+<D:IDA>40814213</D:IDA>
+<D:N>Příbor</D:N>
+<D:NCO>Příbor</D:NCO>
+<D:NU>náměstí Sigmunda Freuda</D:NU>
+<D:CD>19</D:CD>
+<D:TCD>1</D:TCD>
+<D:PSC>74258</D:PSC>
+</D:A>
+</D:Adresy>
+<D:Osoby>
+<D:Osoba>
+<D:Role>S</D:Role>
+<D:J>Jan</D:J>
+<D:P>Malík</D:P>
+<D:DN>1980-09-10</D:DN>
+</D:Osoba>
+</D:Osoby>
+<D:ZI>
+<D:Z>
+<D:S>A</D:S>
+<D:Druh>R</D:Druh>
+<D:PP>
+Hostinská činnost
+</D:PP>
+<D:Vznik>1993-01-11</D:Vznik>
+</D:Z>
+<D:Z>
+<D:S>A</D:S>
+<D:Druh>L</D:Druh>
+<D:PP>
+Výroba, obchod a služby neuvedené v přílohách 1 až 3 živnostenského zákona
+</D:PP>
+<D:Obory_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Vydavatelské činnosti, polygrafická výroba, knihařské a kopírovací práce
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Zprostředkování obchodu a služeb
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Velkoobchod a maloobchod
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Ubytovací služby
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Poskytování software, poradenství v oblasti informačních technologií,
+zpracování dat, hostingové a související činnosti a webové portály
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Pronájem a půjčování věcí movitých
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Služby v oblasti administrativní správy a služby organizačně hospodářské povahy
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Provozování kulturních, kulturně-vzdělávacích a zábavních zařízení, pořádání
+kulturních produkcí, zábav, výstav, veletrhů, přehlídek, prodejních a obdobných
+akcí
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Výroba, obchod a služby jinde nezařazené
+</D:T>
+</D:Obor_cinnosti>
+<D:Obor_cinnosti>
+<D:T>
+Nákup, prodej, správa a údržba nemovitostí
+</D:T>
+</D:Obor_cinnosti>
+</D:Obory_cinnosti>
+<D:Vznik>1994-01-25</D:Vznik>
+</D:Z>
+<D:Z>
+<D:S>A</D:S>
+<D:Druh>V</D:Druh>
+<D:PP>
+Činnost účetních poradců, vedení účetnictví, vedení daňové evidence
+</D:PP>
+<D:Vznik>2008-12-22</D:Vznik>
+</D:Z>
+</D:ZI>
+</D:Vypis_RZP>
+</are:Odpoved>
+</are:Ares_odpovedi>

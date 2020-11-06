@@ -1,4 +1,5 @@
 0.04
+ - Add RZP with person.
  - Base URL to constant.
  - Remove obsolete Encode module, which doesn't used.
  - Replace Encode by Unicode::UTF8.

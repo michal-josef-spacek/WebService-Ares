@@ -11,6 +11,7 @@ my @ret = $obj->commands;
 is_deeply(
 	\@ret,
 	[
+		'rzp',
 		'standard',
 	],
 	'Get commands.',
