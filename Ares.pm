@@ -7,6 +7,9 @@ use Class::Utils qw(set_params);
 use Error::Pure qw(err);
 use HTTP::Request;
 use LWP::UserAgent;
+use Readonly;
+
+Readonly::Scalar our $BASE_URL => 'https://wwwinfo.mfcr.cz/cgi-bin/ares/';
 
 our $VERSION = 0.04;
 
@@ -33,8 +36,7 @@ sub new {
 				'ic',
 			],
 			'method' => 'GET',
-			'url' => 'http://wwwinfo.mfcr.cz/cgi-bin/ares'.
-				'/darv_std.cgi',
+			'url' => $BASE_URL.'darv_std.cgi',
 		},
 	};
 
