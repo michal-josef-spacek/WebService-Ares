@@ -1,13 +1,13 @@
 use strict;
 use warnings;
 
-use Encode qw(decode_utf8);
 use English;
 use Error::Pure::Utils qw(clean);
 use File::Object;
 use Perl6::Slurp qw(slurp);
 use Test::More 'tests' => 3;
 use Test::NoWarnings;
+use Unicode::UTF8 qw(decode_utf8);
 use WebService::Ares::Standard qw(parse);
 
 # Data directory.
