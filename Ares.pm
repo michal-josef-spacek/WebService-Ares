@@ -385,6 +385,7 @@ WebService::Ares - Perl class to communication with ARES service.
  print "\n";
 
  # Output:
+ # rzp
  # standard
 
 =head1 DEPENDENCIES

@@ -16,4 +16,5 @@ print join "\n", @commands;
 print "\n";
 
 # Output:
+# rzp
 # standard
