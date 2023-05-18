@@ -3,6 +3,7 @@
  - Base URL to constant.
  - Remove obsolete Encode module, which doesn't used.
  - Replace Encode by Unicode::UTF8.
+ - Update Module::Install to 1.21 version.
 
 0.03 2020-02-03T14:23:33+01:00
  - Fix Makefile.PL fails with no '.' in @INC.
