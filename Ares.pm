@@ -31,6 +31,14 @@ sub new {
 
 	# Commands.
 	$self->{'commands'} = {
+		'basic' => {
+			'attr' => [
+				'activity',
+				'ic', # required
+			],
+			'method' => 'GET',
+			'url' => $BASE_URL.'darv_bas.cgi',
+		},
 		'rzp' => {
 			'attr' => [
 				'ic',
@@ -83,7 +91,10 @@ sub get {
 
 	# Parse XML.
 	my $data_hr;
-	if ($command eq 'standard') {
+	if ($command eq 'bas') {
+		require WebService::Ares::Basic;
+		$data_hr = WebService::Ares::Basic::parse($data);
+	} elsif ($command eq 'standard') {
 		require WebService::Ares::Standard;
 		$data_hr = WebService::Ares::Standard::parse($data);
 	} elsif ($command eq 'rzp') {

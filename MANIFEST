@@ -1,4 +1,5 @@
 Ares.pm
+Ares/Basic.pm
 Ares/Rzp.pm
 Ares/Standard.pm
 Changes
@@ -9,6 +10,8 @@ examples/ex4.pl
 examples/ex5.pl
 examples/ex6.pl
 examples/ex7.pl
+examples/parse_and_dump_basic.pl
+examples/parse_and_dump_xml_file.pl
 inc/Module/Install.pm
 inc/Module/Install/AuthorRequires.pm
 inc/Module/Install/AuthorTests.pm
@@ -26,8 +29,12 @@ MANIFEST			This list of files
 META.yml
 README
 SIGNATURE
+t/data/basic/alza_27082440.xml
 t/data/rzp/pribor_20201106.xml
 t/data/standard/ex1.xml
+t/WebService-Ares-Basic/01-use.t
+t/WebService-Ares-Basic/02-version.t
+t/WebService-Ares-Basic/03-parse.t
 t/WebService-Ares-Rzp/01-use.t
 t/WebService-Ares-Rzp/02-version.t
 t/WebService-Ares-Rzp/03-parse.t
@@ -39,6 +46,8 @@ t/WebService-Ares/02-version.t
 t/WebService-Ares/03-new.t
 t/WebService-Ares/04-commands.t
 t/WebService-Ares/05-error.t
+xt/WebService-Ares-Basic/01-pod_coverage.t
+xt/WebService-Ares-Basic/02-pod.t
 xt/WebService-Ares-Rzp/01-pod_coverage.t
 xt/WebService-Ares-Rzp/02-pod.t
 xt/WebService-Ares-Standard/01-pod_coverage.t

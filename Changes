@@ -1,4 +1,5 @@
 0.04
+ - Add parsing of Basic XML format.
  - Add RZP with person.
  - Base URL to constant.
  - Improve LICENSE AND COPYRIGHT section in doc.
