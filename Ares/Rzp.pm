@@ -169,7 +169,7 @@ __END__
 
 =head1 NAME
 
-WebService::Ares::Standard - Perl XML::Parser parser for ARES RZP XML file.
+WebService::Ares::Rzp - Perl XML::Parser parser for ARES RZP XML file.
 
 =head1 SYNOPSIS
 
