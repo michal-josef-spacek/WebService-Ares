@@ -104,12 +104,17 @@ sub get_xml {
 
 	# Create url.
 	my $url = $c_hr->{'url'};
+	my @params;
 	foreach my $key (keys %{$def_hr}) {
 		# TODO Control
-		# TODO Better create.
 		if ($key eq 'ic') {
-			$url .= '?ico='.$def_hr->{$key};
+			push @params, 'ico='.$def_hr->{$key};
+		} elsif ($key eq 'activity') {
+			push @params, 'aktivni='.$def_hr->{$key};
 		}
+	}
+	if (@params) {
+		$url .= '?'.(join '&', @params);
 	}
 
 	# Get XML data.
