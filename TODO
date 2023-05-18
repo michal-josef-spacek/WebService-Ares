@@ -9,7 +9,8 @@ standard je hotov
 9. Rzp: Osoby zjistovat presne, ne naivne (presna struktura).
 10. We need to have objects to which we could store this information.
 11. Rewrite from structures to objects.
-12.
+12. Add abstract module for other
+13.
 
 Applied
 =======
