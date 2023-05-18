@@ -7,7 +7,9 @@ standard je hotov
 7. Kodovani v prikladu v WebService::Ares::Standard?
 8. Rzp: Zpracování více osob.
 9. Rzp: Osoby zjistovat presne, ne naivne (presna struktura).
-10.
+10. We need to have objects to which we could store this information.
+11. Rewrite from structures to objects.
+12.
 
 Applied
 =======
