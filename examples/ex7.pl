@@ -5,7 +5,7 @@ use warnings;
 
 use Data::Printer;
 use Perl6::Slurp qw(slurp);
-use WebService::Ares::Rzp qw(parse);
+use WebService::Ares::Standard qw(parse);
 
 # Arguments.
 if (@ARGV < 1) {
